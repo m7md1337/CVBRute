@@ -23,9 +23,7 @@ def do_stuff(q):
             re = requests.post(Url, headers=Headers, data=parmm, verify=False)
         if Type == 2:
             DataJ[KeyJson] = value
-            print(DataJ)
             re = requests.post(Url, headers=Headers, json=DataJ, verify=False)
-        print(re.text)
         if re.status_code == 200:
             ToStop = False
             print("res", re.text, "stsus", re.status_code, "headers", re.headers, "code", value)
